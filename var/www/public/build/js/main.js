@@ -132,6 +132,7 @@ jQuery(function($) {
 
     $('.submit').click(function(e) {
         e.preventDefault();
+     //   return false;
         var first_name = $('#first_name').val();
         var email = $('#email').val();
         var action = $('#action').val();
@@ -156,7 +157,7 @@ jQuery(function($) {
     let    ajaxProcess = false;
         $.ajax({
             data: {
-                action: action,
+                action: first_name,
                 first_name: action,
                 email: email
                 // sessid: $('.js-auth-form-sms [name=sessid]').val()
@@ -176,6 +177,8 @@ jQuery(function($) {
             //    ajaxProcess = false;
             //},
             success: function (data) {
+                ajaxProcess = true;
+                console.log(data);
             //    if (data.success) {
             //        window.dataLayer = window.dataLayer || [];
             //        window.dataLayer.push({
