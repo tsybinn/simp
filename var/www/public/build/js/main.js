@@ -137,34 +137,38 @@ jQuery(function($) {
         var email = $('#email').val();
         var action = $('#action').val();
 
-        console.log(action);
+        //console.log(action);
+       // console.log('jjjj');
         $(".error").remove();
 
         if (first_name.length < 1) {
             $('#first_name').before('<span class="error">Введите Имя</span>');
+            return false;
         }
 
         if (email.length < 1) {
             $('#email').before('<span class="error">Введите email</span>');
+            return false;
         } else {
             var regEx = /([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/;
             var validEmail = regEx.test(email);
             if (!validEmail) {
                 $('#email').before('<span class="error">Введите корректный email</span>');
+                return false;
             }
         }
 
-    let    ajaxProcess = false;
+  //  let    ajaxProcess = false;
         $.ajax({
             data: {
-                action: first_name,
-                first_name: action,
+                action: action,
+                first_name: first_name,
                 email: email
                 // sessid: $('.js-auth-form-sms [name=sessid]').val()
             },
             dataType: 'json',
             type: 'post',
-            url: '/register.php',
+            url: '/register',
             //beforeSend: function () {
             //    $codeInput.blur();
             //    $('.authorization-popup__preload').show();
