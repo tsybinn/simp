@@ -31,8 +31,6 @@ RUN  apt install symfony-cli
 #RUN docker-php-ext-install sockets
 #RUN docker-php-ext-install pdo_mysql
 #RUN docker-php-ext-install mysqli
-RUN mkdir var
-RUN chown -R www-data:www-data /usr/share/nginx/html/var
 
 #WORKDIR /var/www/
 #RUN usermod -u 1000 www-data
@@ -66,3 +64,5 @@ ADD fake_sendmail.sh /usr/bin/fake_sendmail.sh
 
 RUN chmod -R 777 /usr/bin/fake_sendmail.sh
 RUN chmod -R 777  /var/mail
+
+
