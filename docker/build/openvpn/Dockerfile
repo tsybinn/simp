@@ -1,8 +1,18 @@
-FROM httpd:2.4
+#FROM httpd:2.4
 
-WORKDIR /usr
-RUN /bin/bash
 
+
+#RUN apt-get update  && apt-get install -y chrony openvpn easy-rsa nano mc
+#
+#RUN mkdir -p /etc/openvpn/keys  \
+#    && mkdir /etc/openvpn/easy-rsa  \
+#    && cd /etc/openvpn/easy-rsa \
+#    && cp -r /usr/share/easy-rsa/* .
+
+
+
+#ADD vars /etc/openvpn/easy-rsa
+#WORKDIR /etc/openvpn/easy-rsa
 #RUN bash
 #
 #LABEL maintainer="Kyle Manna <kyle@kylemanna.com>"
