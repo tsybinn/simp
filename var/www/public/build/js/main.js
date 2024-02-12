@@ -55,15 +55,15 @@ jQuery(function($) {
         }
     });
 
-    $(window).on("scroll", function(e) {
-        if ($(window).scrollTop() > 50) {
-            // > 100px from top - show div
-            $(".navbar-custom").addClass("navbar_style");
-        } else {
-            // <= 100px from top - hide div
-            $(".navbar-custom").removeClass("navbar_style");
-        }
-    });
+    //$(window).on("scroll", function(e) {
+    //    if ($(window).scrollTop() > 50) {
+    //        // > 100px from top - show div
+    //        $(".navbar-custom").addClass("navbar_style");
+    //    } else {
+    //        // <= 100px from top - hide div
+    //        $(".navbar-custom").removeClass("navbar_style");
+    //    }
+    //});
 
 
 

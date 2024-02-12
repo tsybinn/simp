@@ -36,6 +36,19 @@ services:
     networks:
       default:
         ipv4_address: ${IP_MYSQL}
+  openvpn:
+    container_name: openvpn
+    build: ./docker/build/openvpn
+    restart: always
+    ports:
+      - '412:412'
+    volumes:
+#      - ${DIR_SITE_LOCAL}:${DIR_SITE_CONTAINER}
+#      - ./docker/build/php-fpm/hosts:/etc/hosts
+      - ./var/mail:/var/mail
+    networks:
+      default:
+        ipv4_address: 172.16.1.6
   php:
     container_name: php-fpm
     build: docker/build/php-fpm

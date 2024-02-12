@@ -8,7 +8,7 @@ RUN apt-get update && apt-get install -y zlib1g-dev g++ git libicu-dev zip libzi
 WORKDIR /usr/share/nginx/html
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
 RUN curl  'https://dl.cloudsmith.io/public/symfony/stable/setup.deb.sh' | bash
-RUN  apt install symfony-cli
+#RUN  apt install symfony-cli
 #
 #RUN apt-get update && apt-get install -y \
 #        curl \

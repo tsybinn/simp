@@ -95,12 +95,12 @@ class User implements UserInterface
         return $this;
     }
 
-    public function getFIRSTNAME(): ?string
+    public function getFirstName(): ?string
     {
         return $this->firstName;
     }
 
-    public function setFIRSTNAME(string $firstName): static
+    public function setFirstName(string $firstName): static
     {
         $this->firstName = $firstName;
 
